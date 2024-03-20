@@ -28,3 +28,18 @@ Wed 20 Mar 2024 08:08:59 PM UTC:
  tests:  2|3
 total_score: 20/70
 f456352
+Wed 20 Mar 2024 08:12:15 PM UTC: 
+ exercises.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:83:24: error: too many arguments to function ‘popCurrent’
+   83 |     if (*dato == elem) popCurrent(L, elem);
+      |                        ^~~~~~~~~~
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:32:7: note: declared here
+   32 | void *popCurrent(List *L);
+      |       ^~~~~~~~~~
+Compilation failed
+a8d57af
