@@ -61,3 +61,18 @@ Wed 20 Mar 2024 08:20:40 PM UTC:
  tests:  3|2
 total_score: 40/70
 fbf4b01
+Wed 20 Mar 2024 08:22:57 PM UTC: 
+ exercises.c | 12 ++++++++----
+ 1 file changed, 8 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:104:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+  104 |   int * elem:
+      |             ^
+exercises.c:104:13: error: expected expression before ‘:’ token
+exercises.c:106:9: error: ‘elem’ undeclared (first use in this function)
+  106 |   while(elem != NULL){
+      |         ^~~~
+exercises.c:106:9: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+7d5f303
