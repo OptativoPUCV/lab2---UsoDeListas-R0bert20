@@ -104,3 +104,20 @@ Wed 20 Mar 2024 08:27:17 PM UTC:
  tests:  4|1
 total_score: 50/70
 b30169b
+Wed 20 Mar 2024 08:42:56 PM UTC: 
+ exercises.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:132:17: error: implicit declaration of function ‘last’ [-Werror=implicit-function-declaration]
+  132 |       ultDato = last(lista);
+      |                 ^~~~
+exercises.c:132:15: error: assignment to ‘char *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  132 |       ultDato = last(lista);
+      |               ^
+exercises.c:136:15: error: assignment to ‘char *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  136 |         dato  = last(lista);
+      |               ^
+cc1: all warnings being treated as errors
+Compilation failed
+fbf6b09
