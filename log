@@ -121,3 +121,30 @@ exercises.c:136:15: error: assignment to ‘char *’ from ‘int’ makes point
 cc1: all warnings being treated as errors
 Compilation failed
 fbf6b09
+Wed 20 Mar 2024 08:44:05 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:132:17: error: implicit declaration of function ‘back’ [-Werror=implicit-function-declaration]
+  132 |       ultDato = back(lista);
+      |                 ^~~~
+exercises.c:132:15: error: assignment to ‘char *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  132 |       ultDato = back(lista);
+      |               ^
+exercises.c:136:15: error: assignment to ‘char *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  136 |         dato  = back(lista);
+      |               ^
+cc1: all warnings being treated as errors
+Compilation failed
+9dad700
+Wed 20 Mar 2024 08:52:09 PM UTC: 
+ exercises.c | 21 +++++++--------------
+ 1 file changed, 7 insertions(+), 14 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:132:6: error: expected statement before ‘)’ token
+  132 |     })
+      |      ^
+Compilation failed
+9dad700
