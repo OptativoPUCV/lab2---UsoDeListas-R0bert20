@@ -2465,3 +2465,9 @@ exercises.c:126:9: error: unused variable ‘dato’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 2cdbf87
+Sat 23 Mar 2024 11:21:52 PM UTC: 
+ exercises.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+ tests:  4|1
+total_score: 50/70
+c0991dc
