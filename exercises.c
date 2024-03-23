@@ -128,6 +128,7 @@ int parentesisBalanceados(char *cadena) {
   int cont = 0;
   while(cadena[i] != NULL){
     if (cadena[i] == '(') {
+      dato = push(P, &cadena[i]);
       push(P, dato);
       if (dato != ')')
       {

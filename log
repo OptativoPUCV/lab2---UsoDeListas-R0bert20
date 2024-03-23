@@ -2407,3 +2407,20 @@ exercises.c:132:10: error: ‘dato’ may be used uninitialized in this function
 cc1: all warnings being treated as errors
 Compilation failed
 bae1015
+Sat 23 Mar 2024 11:14:38 PM UTC: 
+ exercises.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:129:19: error: comparison between pointer and integer [-Werror]
+  129 |   while(cadena[i] != NULL){
+      |                   ^~
+exercises.c:131:12: error: void value not ignored as it ought to be
+  131 |       dato = push(P, &cadena[i]);
+      |            ^
+exercises.c:133:16: error: comparison between pointer and integer [-Werror]
+  133 |       if (dato != ')')
+      |                ^~
+cc1: all warnings being treated as errors
+Compilation failed
+d674229
