@@ -1451,3 +1451,9 @@ stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is o
 cc1: all warnings being treated as errors
 Compilation failed
 504ab31
+Sat 23 Mar 2024 10:14:08 PM UTC: 
+ exercises.c | 38 --------------------------------------
+ 1 file changed, 38 deletions(-)
+ tests:  4|1
+total_score: 50/70
+4929d73
