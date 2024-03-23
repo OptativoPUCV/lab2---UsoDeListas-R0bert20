@@ -125,16 +125,13 @@ int parentesisBalanceados(char *cadena) {
   Stack* P = create_stack();
   char* dato = top(P);
   int cont = 0;
-  int cont2 = 0;
+  //int cont2 = 0;
   while(dato != NULL){
     if (*dato == '(') {
       cont2++;
       pop(P);
       dato = top(P);
-      if(*dato == ')') {
-        cont++;
-        pop(P);
-        dato = top(P);
+      cont++;
       }
       /*else if(*dato == '{'){
         pop(P);
@@ -146,11 +143,6 @@ int parentesisBalanceados(char *cadena) {
           } 
         }
       }*/
-    } 
-
-    if(cont % 2 != 0 && cont2 % 2 != 0) return 0;
-
-  }
-  
-  return 1;
+    }  
+  return cont;
 }

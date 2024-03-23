@@ -2507,3 +2507,15 @@ Sat 23 Mar 2024 11:36:38 PM UTC:
  tests:  5|1
 total_score: 50/70
 8953a35
+Sat 23 Mar 2024 11:42:53 PM UTC: 
+ exercises.c | 12 ++----------
+ 1 file changed, 2 insertions(+), 10 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:131:7: error: ‘cont2’ undeclared (first use in this function); did you mean ‘cont’?
+  131 |       cont2++;
+      |       ^~~~~
+      |       cont
+exercises.c:131:7: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+137a33e
