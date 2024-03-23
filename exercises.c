@@ -148,7 +148,7 @@ int parentesisBalanceados(char *cadena) {
       }*/
     } 
 
-    if(cont > 0 && cont2 % 2 != 0) return 0;
+    if(cont % 2 != 0 && cont2 % 2 != 0) return 0;
 
   }
   
