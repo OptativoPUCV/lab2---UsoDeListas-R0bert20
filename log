@@ -609,3 +609,35 @@ arraylist.c:37:6: error: ‘pushFront’ defined but not used [-Werror=unused-fu
 cc1: all warnings being treated as errors
 Compilation failed
 75e213b
+Sat 23 Mar 2024 10:02:20 PM UTC: 
+ exercises.c | 36 +++++++++++-------------------------
+ 1 file changed, 11 insertions(+), 25 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:131:18: error: passing argument 1 of ‘top’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  131 |       dato = top(&cadena[i]);
+      |                  ^~~~~~~~~~
+      |                  |
+      |                  char *
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘char *’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+In file included from test.c:5:
+exercises.c:134:16: error: expected expression before ‘=’ token
+  134 |         return = 0;
+      |                ^
+exercises.c:137:46: error: expected expression before ‘||’ token
+  137 |         if (cadena[i] == ')'&& *elem != '(') || (cadena[i] == ']'&& *elem != '[') ||(cadena[i] == '}' && *elem != '{')) return 0;
+      |                                              ^~
+exercises.c:137:9: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  137 |         if (cadena[i] == ')'&& *elem != '(') || (cadena[i] == ']'&& *elem != '[') ||(cadena[i] == '}' && *elem != '{')) return 0;
+      |         ^~
+exercises.c:137:119: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  137 |         if (cadena[i] == ')'&& *elem != '(') || (cadena[i] == ']'&& *elem != '[') ||(cadena[i] == '}' && *elem != '{')) return 0;
+      |                                                                                                                       ^
+exercises.c:137:119: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+Compilation failed
+51de943
