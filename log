@@ -1457,3 +1457,17 @@ Sat 23 Mar 2024 10:14:08 PM UTC:
  tests:  4|1
 total_score: 50/70
 4929d73
+Sat 23 Mar 2024 10:51:19 PM UTC: 
+ exercises.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:127:18: error: comparison between pointer and integer [-Werror]
+  127 | while (cadena[i] != NULL){
+      |                  ^~
+exercises.c:125:8: error: unused variable ‘pila’ [-Werror=unused-variable]
+  125 | Stack* pila = create_stack();
+      |        ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e759ec8
