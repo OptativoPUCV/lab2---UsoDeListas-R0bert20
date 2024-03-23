@@ -2424,3 +2424,13 @@ exercises.c:133:16: error: comparison between pointer and integer [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 d674229
+Sat 23 Mar 2024 11:16:41 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:131:14: error: void value not ignored as it ought to be
+  131 |         dato = push(P, &cadena[i]);
+      |              ^
+Compilation failed
+39142f0
