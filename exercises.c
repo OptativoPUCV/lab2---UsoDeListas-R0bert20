@@ -122,7 +122,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {   
-  char* elemento = top(cadena);
+  char* elemento = top(&cadena);
 
 
   while(elemento != NULL){
