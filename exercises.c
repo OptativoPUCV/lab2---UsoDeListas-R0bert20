@@ -122,28 +122,43 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-  Pila* pila = crear_pila();
+  char* elemento = top(cadena);
 
-  while (*cadena != '\0') {
-      if (*cadena == '(' || *cadena == '[' || *cadena == '{') {
-          push(pila, *cadena);
-      } else if (*cadena == ')' || *cadena == ']' || *cadena == '}') {
-          if (pila->tope == NULL) {
-              return 0; // Hay un cierre sin su correspondiente apertura
-          }
-          char top_char = pop(pila);
-          if ((*cadena == ')' && top_char != '(') || 
-              (*cadena == ']' && top_char != '[') || 
-              (*cadena == '}' && top_char != '{')) {
-              return 0; // Los paréntesis, corchetes o llaves no están balanceados
-          }
-      }
-      cadena++;
-  }
 
-  if (pila->tope == NULL) {
-      return 1; // La pila está vacía, lo que significa que los paréntesis, corchetes y llaves están balanceados
-  } else {
-      return 0; // La pila no está vacía, lo que significa que hay paréntesis, corchetes o llaves sin cerrar
+  while(elemento != NULL){
+    int cont = 0;
+    if(elemento == '('){
+      pop(cadena);
+      elemento = top(cadena);
+      if(elemento != ')'){
+        cont++;
+        pop(cadena);
+        elemento = top(cadena);
+      } 
+
+    }else if(elemento == '{'){
+      pop(cadena);
+      elemento = top(cadena);
+      if (elemento != '}'){
+        cont++;
+        pop(cadena);
+        elemento = top(cadena);
+      } 
+
+    } else if(elemento == '['){
+      pop(cadena);
+      elemento = top(cadena);
+      if(elemento != ']'){
+        cont++;
+        pop(cadena);
+        elemento = top(cadena);
+      } 
+    }
+
+    if(cont > 0){
+      return 0;
+    }
+    else return 1;
+
   }
 }
