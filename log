@@ -2454,3 +2454,14 @@ exercises.c:130:20: error: void value not ignored as it ought to be
       |                    ^~~~
 Compilation failed
 4c1679d
+Sat 23 Mar 2024 11:20:11 PM UTC: 
+ exercises.c | 15 +--------------
+ 1 file changed, 1 insertion(+), 14 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:126:9: error: unused variable ‘dato’ [-Werror=unused-variable]
+  126 |   char* dato = top(P);
+      |         ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2cdbf87
