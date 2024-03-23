@@ -2531,3 +2531,14 @@ Sat 23 Mar 2024 11:43:33 PM UTC:
  tests:  4|1
 total_score: 50/70
 d4a66d1
+Sat 23 Mar 2024 11:43:51 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:130:14: error: comparison between pointer and integer [-Werror]
+  130 |     if (dato == '(') {
+      |              ^~
+cc1: all warnings being treated as errors
+Compilation failed
+219719f
