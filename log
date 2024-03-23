@@ -663,3 +663,14 @@ exercises.c:133:10: error: ‘dato’ may be used uninitialized in this function
 cc1: all warnings being treated as errors
 Compilation failed
 9e8fa1f
+Sat 23 Mar 2024 10:04:28 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:133:10: error: ‘dato’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  133 |       if (dato == NULL) {
+      |          ^
+cc1: all warnings being treated as errors
+Compilation failed
+161b592
