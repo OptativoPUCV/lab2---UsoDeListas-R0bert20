@@ -122,22 +122,28 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-  Stack* P1 = create_stack();
-  char* dato;
-  int i = 0;
-  while(cadena[i] != '\0'){
-    if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{'){
-      push(P1, &cadena[i]);
-      dato = top(P1);
-    } else if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}'){
-      if (dato == NULL) {
-        return 0;
-      } else {
-        char* elem = pop(P1);
-        if ((cadena[i] == ')'&& *elem != '(') || (cadena[i] == ']'&& *elem != '[') ||(cadena[i] == '}' && *elem != '{')) return 0;
-      }  
-    }
-    i++;
+  Pila* pila = crear_pila();
+
+  while (*cadena != '\0') {
+      if (*cadena == '(' || *cadena == '[' || *cadena == '{') {
+          push(pila, *cadena);
+      } else if (*cadena == ')' || *cadena == ']' || *cadena == '}') {
+          if (pila->tope == NULL) {
+              return 0; // Hay un cierre sin su correspondiente apertura
+          }
+          char top_char = pop(pila);
+          if ((*cadena == ')' && top_char != '(') || 
+              (*cadena == ']' && top_char != '[') || 
+              (*cadena == '}' && top_char != '{')) {
+              return 0; // Los paréntesis, corchetes o llaves no están balanceados
+          }
+      }
+      cadena++;
   }
-  return 1;
+
+  if (pila->tope == NULL) {
+      return 1; // La pila está vacía, lo que significa que los paréntesis, corchetes y llaves están balanceados
+  } else {
+      return 0; // La pila no está vacía, lo que significa que hay paréntesis, corchetes o llaves sin cerrar
+  }
 }
