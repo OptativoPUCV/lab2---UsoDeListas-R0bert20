@@ -3574,3 +3574,17 @@ stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is o
 cc1: all warnings being treated as errors
 Compilation failed
 42c5ea7
+Sun 24 Mar 2024 12:01:58 AM UTC: 
+ exercises.c | 36 +-----------------------------------
+ 1 file changed, 1 insertion(+), 35 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:125:9: error: unused variable ‘lista’ [-Werror=unused-variable]
+  125 |   List* lista = create_list();
+      |         ^~~~~
+exercises.c:127:1: error: control reaches end of non-void function [-Werror=return-type]
+  127 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+df28f87
